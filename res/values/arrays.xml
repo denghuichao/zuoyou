@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    
+   	<!-- 性别 --> 
+    <string-array name="sex_list">
+        <item>请选择性别</item>
+        <item >男</item>
+        <item>女</item>
+        <item>其他</item>
+     </string-array>
+     
+     <!-- 身份标识选择 --> 
+     <string-array name="identity_list">
+         <item >请选择身份标签</item>
+         <item >学生</item>
+         <item >公务员</item>
+         <item >程序员</item>
+     </string-array>
+     
+      <!-- 你来自哪个大学？目前提供武汉七所211大学可以选择--> 
+     <string-array name="school_list">
+         <item >武汉大学</item>
+         <item >武汉理工大学</item>
+         <item >华中科技大学</item>
+         <item >中南财经政法大学</item>
+         <item >中南民族大学</item>
+         <item >中国地质大学（武汉）</item>
+         <item >华中师范大学</item>
+     </string-array>
+     
+      <!-- 选择个性化的标签 --> 
+     <string-array name="personality_label_list">
+        <item >选择恐惧症</item>
+        <item >密集恐惧症</item>
+        <item >社交恐惧症</item>
+        <item >强迫症</item>
+        <item >拖延症</item>
+		<item >文艺</item>
+   		<item >逗比</item>
+       	<item >暖男</item>
+        <item >小清新</item>
+        <item >热血青年</item>
+        <item >萌萌哒</item>
+        <item >女汉子</item>
+        <item >大叔</item>
+        <item >神经大条</item>
+        <item >吃货</item>
+		<item >靠谱</item>
+		<item >厚道</item>
+    	<item >义薄云天</item>
+        <item >叛逆</item>
+		<item >宅</item>
+   		<item >安静</item>
+        <item >简简单单</item>
+    </string-array>  
+    
+    <!-- 选择兴趣标签 -->
+    <!-- 你喜欢什么音乐？ -->
+    <string-array name="interest_music_label_list">
+      <item >欧美</item>
+	  <item >日韩</item>
+      <item >港台</item>
+      <item >大陆</item>
+      <item >爵士</item>
+      <item >乡村民谣</item>
+      <item >摇滚</item>
+      <item >电子</item>
+      <item >布鲁斯</item>
+      <item >轻音乐</item>
+      <item >经典怀旧</item>
+      <item >慢歌</item>
+      <item >动感  </item>
+    </string-array>
+    
+    <!-- 你喜欢什么电影？ -->
+    <string-array name="interest_movie_label_list">
+      <item >高智商</item>
+	  <item >喜剧</item>
+      <item >推理</item>
+      <item >惊悚</item>
+      <item >科幻</item>
+      <item >动作</item>
+      <item >爱情</item>
+      <item >美国大片</item>
+      <item >日韩</item>
+      <item >台湾</item>
+      <item >港片</item>
+      <item >励志</item>
+      <item >剧情</item>
+    </string-array>
+     
+    <!--你喜欢什么样的旅行？-->
+    <string-array name="interst_travel_label_list">
+       	<item >自驾游</item>
+		<item >背包客</item>
+    	<item >骑行</item>
+		<item >西藏</item>
+		<item >新疆</item>
+		<item >云南</item>
+		<item >欧洲</item>
+		<item >探险</item>
+		<item >东南亚</item>
+		<item >日韩游</item>
+    </string-array>
+    
+     <!--你喜欢什么运动？-->
+    <string-array name="interest_sport_label_list">
+        <item >睡觉</item>
+		<item >羽毛球</item>
+		<item >乒乓球</item>
+		<item >足球</item>
+		<item >篮球</item>
+		<item >单车</item>
+		<item >瑜伽</item>
+		<item >跳舞</item>
+		<item >网球</item>
+		<item >高尔夫</item>
+		<item >台球</item>
+		<item >健身</item>
+		<item >跆拳道</item>
+		<item >郊游</item>
+		<item >轮滑</item>
+		<item >游泳</item>
+    </string-array>
+    
+     <!--你喜欢什么食物？-->
+    <string-array name="interest_food_label_list">
+        <item >肉</item>
+		<item >撸串儿</item>
+		<item >麻辣烫</item>
+		<item >麻辣香锅</item>
+		<item >火锅</item>
+		<item >早茶</item>
+		<item >日本菜</item>
+		<item >韩国菜</item>
+		<item >泰国菜</item>
+		<item >粤菜</item>
+		<item >上海菜</item>
+		<item >川菜</item>
+		<item >东北菜</item>
+    </string-array>
+    
+     <!--你喜欢什么书籍？-->
+    <string-array name="interest_book_list">
+      	<item >武侠</item>
+		<item >爱情</item>
+		<item >科幻</item>
+		<item >动漫</item>
+		<item >青春</item>
+		<item >哲学</item>
+		<item >科技</item>
+		<item >时政</item>
+		<item >历史</item>
+    </string-array>
+    
+    <!-- share items -->
+    <string-array name="message_list_options1">
+	    <item>回复TA</item>
+	    <item>查看卡片</item>
+    </string-array>
+    <string-array name="message_list_options2">
+	    <item>回复TA</item>
+	    <item>查看内容</item>
+    </string-array>
+    <string-array name="comment_options_2">
+	    <item>回复</item>
+	    <item>删除</item>
+    </string-array>
+    <string-array name="comment_options_1">
+	    <item>回复</item>
+    </string-array>
+    <string-array name="favorite_options">
+	    <item>取消收藏</item>
+    </string-array>
+    
+    <string-array name="copy_options">
+	    <item>复制</item>
+    </string-array>
+    
+    <string-array name="pay_type_options">
+        <item>支付宝安全支付</item>
+        <item>支付宝网页版</item>
+    </string-array>
+    
+    <string-array name="photo_choose">
+        <item>拍照</item>
+        <item>用户相册</item>
+    </string-array>
+    
+    <string-array name="country_codes">
+    <item>-</item>
+    <item>AR</item>
+    <item>AU</item>
+    <item>BR</item>
+    <item>BG</item>
+    <item>CA</item>
+    <item>CN</item>
+    <item>CZ</item>
+    <item>DE</item>
+    <item>DK</item>
+    <item>ES</item>
+    <item>FI</item>
+    <item>FR</item>
+    <item>GB</item>
+    <item>GR</item>
+    <item>HU</item>
+    <item>ID</item>
+    <item>IT</item>
+    <item>JP</item>
+    <item>KR</item>
+    <item>NL</item>
+    <item>PL</item>
+    <item>PT</item>
+    <item>RU</item>
+    <item>SE</item>
+    <item>SK</item>
+    <item>SI</item>
+    <item>TR</item>
+    <item>TW</item>
+    <item>US</item>
+  </string-array>
+    <string-array name="preferences_front_light_values">
+    <item>ON</item>
+    <item>AUTO</item>
+    <item>OFF</item>
+  </string-array>
+ 
+</resources>

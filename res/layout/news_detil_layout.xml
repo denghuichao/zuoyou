@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_ll"
+    android:background="@color/white"
+    android:orientation="vertical"> 
+    
+    <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/topll"
+        android:background="@color/topbar_color"> 
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="详情"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+        
+         <Button android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:id="@+id/cancel"
+            android:text="返回"
+            android:onClick="buttonClick"
+            android:background="@null"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/navbar_button_text_size"
+            android:textColor="@color/white"/>
+       </RelativeLayout>
+       
+     	 <ImageView
+		      android:id="@+id/xindicator"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_centerInParent="true"
+		      android:visibility="invisible"
+           	  android:background="@drawable/round_1"/>
+    
+      <ScrollView android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scrollbars="none"
+	    android:visibility="gone"
+	    android:layout_below="@+id/topll"
+	    android:id="@+id/newsContentll"
+	    android:layout_margin="10dp">
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal"> 
+    <ImageView 
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/userIcon"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_margin="5dp"/>
+    
+    <LinearLayout android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_toRightOf="@+id/userIcon"
+        android:layout_margin="8dp"
+        android:id="@+id/cl"
+        android:orientation="vertical">
+        
+        <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/name"
+            android:textColor="#3A5FCD"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:textSize="19dp"
+            android:text="张三"/>
+        
+         <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/name"
+            android:id="@+id/distance"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:clickable="true"
+            android:background="@drawable/text_selector"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:text="离我990m"/>
+        
+        </RelativeLayout>
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/time"
+            android:textColor="@color/coral"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:text="昨天"/>
+          
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/contentText"
+            android:textColor="#080808"
+            android:autoLink="email|phone|web"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:text="方法一:在photoshop中选好颜色 拾色器中 # 后面的值就是现在这里的后六位 这里的前两位代表透明度"/>
+       
+       
+         <LinearLayout android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:clickable="true"
+         android:id="@+id/content_ll">
+        
+       <LinearLayout android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+         
+          <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/sharedContentText"
+            android:clickable="false"
+            android:autoLink="email|phone|web"
+            android:layout_centerVertical="true"
+            android:textSize="15dp"/>  
+         
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="220dp"
+			android:maxHeight="220dp"
+			android:adjustViewBounds="true"
+			android:clickable="true"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="5dp"
+			android:scaleType="fitCenter"
+            android:id="@+id/singleImage"/>
+        <com.deng.mychat.view.MyGridView 
+           android:id="@+id/twoColGrid"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:horizontalSpacing="3dp"
+           android:verticalSpacing="3dp"
+           android:numColumns="2" />
+        <com.deng.mychat.view.MyGridView 
+           android:id="@+id/threeColGrid"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:horizontalSpacing="3dp"
+           android:verticalSpacing="3dp"
+           android:numColumns="3" />
+        </FrameLayout> 
+     </LinearLayout>
+        
+        <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:background="#DEDEDE"
+        android:id="@+id/urlDescL"
+		android:padding="5dp"
+		android:layout_margin="5dp"
+        android:visibility="gone">
+        	<ImageView android:layout_width="48dp"
+        	    android:layout_height="48dp"
+        	    android:layout_margin="3dp"
+        	    android:scaleType="centerCrop"
+        	    android:src="@drawable/avatar_placeholder"
+        	    android:id="@+id/ulrIcon"
+        	    android:layout_alignParentLeft="true"/>
+        	<TextView android:layout_width="fill_parent"
+        	    android:layout_height="wrap_content"
+        	    android:layout_toRightOf="@+id/ulrIcon"
+        	    android:id="@+id/ulrDesc"
+        	    android:autoLink="web"
+        	    android:maxLines="2"
+        	    android:textSize="17dp"
+        	    android:textColor="#080808"
+        	    android:text="方法一:在photoshop中选好颜色 拾色器中 # 后面的值就是现在这里的后六位 这里的前两位代表透明度"
+        	    />
+        </RelativeLayout>
+      </LinearLayout>
+      
+        <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center">
+        
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/comment_ll"
+            android:layout_toLeftOf="@+id/share_ll">
+          <ImageButton android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:scaleType="fitCenter"
+              android:id="@+id/commentBtn"
+              android:background="@drawable/conment_btn_selector"/>
+	      <TextView android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	        android:gravity="center"
+	         android:id="@+id/numOfComment"
+	         android:layout_marginLeft="5dp"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="@android:color/transparent"
+	        android:text="0"/>
+	    </LinearLayout>
+	    
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/comment_ll"
+            android:layout_marginRight="10dp"
+            android:layout_height="25dp">
+          <ImageButton android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:scaleType="fitCenter"
+              android:background="@drawable/prise_btn_selector"
+              android:id="@+id/priseBtn"
+              />
+	      <TextView android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:gravity="center"
+	         android:id="@+id/numOfPrise"
+	        android:layout_centerVertical="true"
+	        android:textSize="16dp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_alignParentLeft="true"
+	        android:background="@android:color/transparent"
+	        android:text="0"/>
+	    </LinearLayout>
+	   
+        
+         <LinearLayout android:layout_width="wrap_content"
+             android:layout_alignParentRight="true"
+             android:id="@+id/share_ll"
+             android:layout_marginRight="10dp"
+            android:layout_height="25dp">
+          <ImageButton android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:scaleType="fitCenter"
+              android:id="@+id/shareBtn"
+              android:background="@drawable/share_btn_selector"/>
+	      <TextView android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:gravity="center"
+	         android:id="@+id/numOfShare"
+	         android:layout_marginLeft="5dp"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="@android:color/transparent"
+	        android:text="0"/>
+	    </LinearLayout>
+	     
+        </RelativeLayout>
+     
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rpl"
+        android:background="@drawable/news_bg_selector"
+        android:orientation="vertical">
+         
+         <com.deng.mychat.view.MyGridView 
+        android:id="@+id/priseViewL"
+       	android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="8"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp"
+        android:gravity="right"
+        android:scrollbars="none"
+        android:layout_gravity="right" />
+    
+     <View android:layout_height="1dp" 
+      android:layout_width="fill_parent"
+      android:id="@+id/div"
+      android:background="#D3D3D3"/> 
+      
+     <com.deng.mychat.view.MyListView 
+         android:layout_marginLeft="5dp"
+         android:layout_marginRight="5dp"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/replayList"
+          android:scrollbars="none"
+          android:footerDividersEnabled="false"
+	      android:headerDividersEnabled="false"
+	      android:divider="#00000000"
+	      android:dividerHeight="0dip"
+          android:orientation="vertical">
+      </com.deng.mychat.view.MyListView>
+      </LinearLayout>
+    </LinearLayout> 
+    <View android:layout_height="5dp" 
+      android:layout_width="fill_parent"
+      android:layout_below="@+id/cl"
+      android:layout_alignParentBottom="true"/>   
+     </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+     <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/topbar_color"> 
+        
+         <Button android:id="@+id/cancelBtn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_centerVertical="true"
+            	android:onClick="buttonClick"
+            	android:clickable="true"
+            	android:textSize="@dimen/navbar_button_text_size"
+            	android:text="返回"
+            	android:background="#00000000"
+            	android:textColor="@color/white" />
+         
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="消息"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+       </RelativeLayout> 
+     
+      <ScrollView android:layout_width="fill_parent"  
+		    android:layout_height="fill_parent">
+      <LinearLayout android:layout_width="fill_parent"  
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical">
+       <com.deng.mychat.view.MyListView
+	        android:id="@+id/list"
+		    android:layout_width="fill_parent"  
+		    android:layout_height="wrap_content"  
+		    android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/reader_item_divider"
+            android:listSelector="@android:color/transparent"
+		    android:dividerHeight="1dp"  
+		    android:fadingEdge="none"  
+		    android:fastScrollEnabled="false"  
+		    android:footerDividersEnabled="false"  
+		    android:headerDividersEnabled="false"  
+		    android:smoothScrollbar="true" />
+       
+       <TextView android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:text="查看更早的消息"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_margin="3dp"
+            android:onClick="buttonClick"
+            android:visibility="gone"
+            android:id="@+id/more"
+            android:background="#E7E7E7"/>
+       </LinearLayout>
+</ScrollView>
+</LinearLayout>

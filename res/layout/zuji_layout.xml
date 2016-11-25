@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:background="@color/white"
+	  	android:layout_width="fill_parent"  
+	  	android:layout_height="fill_parent"
+	  	android:orientation="vertical" > 
+
+       
+	  <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/topbar_color"> 
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="足迹"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+        
+        <Button android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:id="@+id/cancel"
+            android:text="返回"
+            android:onClick="buttonClick"
+            android:background="@null"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/navbar_button_text_size"
+            android:textColor="@color/white"/>
+       </RelativeLayout>  
+       
+       <RelativeLayout android:layout_width="fill_parent"  
+		        android:layout_height="fill_parent" >
+        
+           	 <ImageView
+		      android:id="@+id/xindicator"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_centerInParent="true"
+		      android:visibility="invisible"
+           	  android:background="@drawable/round_1"/>
+           	 
+       <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrMode="both" >
+       <LinearLayout android:layout_width="fill_parent"  
+	  	android:layout_height="fill_parent"
+	  	android:orientation="vertical" >
+	   <RelativeLayout android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:id="@+id/top_l">
+		 <ImageView 
+			 android:id="@+id/theme_bg"
+			 android:layout_alignParentTop="true"
+			 android:layout_width="fill_parent"
+			 android:layout_height="200dp"
+			 android:scaleType="fitXY"
+			 android:background="@drawable/theme"/>
+		 
+		  <ImageButton android:layout_width="58dp"
+           android:layout_height="58dp"
+           android:id="@+id/publish"
+           android:onClick="buttonClick"
+           android:layout_below="@+id/llayout"
+           android:layout_marginRight="-15dp"
+           android:visibility="gone"
+           android:layout_marginTop="-15dp"
+           android:layout_alignParentRight="true"
+           android:layout_gravity="top|right"
+           android:background="@drawable/publish"/>
+		  
+		  
+		   <ImageView 
+			 android:id="@+id/head"
+			 android:layout_width="64dp"
+			 android:layout_height="64dp"
+			 android:scaleType="fitXY"
+			 android:clickable="true"
+			 android:layout_alignParentRight="true"
+			 android:layout_marginRight="15dp"
+			 android:layout_below="@+id/theme_bg"
+			 android:layout_marginTop="-32dp"/>
+		   
+		   <TextView android:layout_height="wrap_content"
+		       android:layout_width="wrap_content"
+		       android:layout_above="@+id/head"
+		       android:layout_toLeftOf="@+id/head"
+		       android:layout_marginBottom="5dp"
+		       android:layout_marginRight="8dp"
+		       android:text="张三"
+		       android:singleLine="true"
+		       android:textSize="18dp"
+		       android:id="@+id/name"
+		       android:textColor="@color/white"/>
+		 
+	   </RelativeLayout>
+	   
+	   
+	    <com.deng.mychat.view.MyListView
+		        android:id="@+id/listView"
+		        android:layout_width="fill_parent"  
+		        android:layout_height="fill_parent" 
+		        android:cacheColorHint="@android:color/transparent"
+                android:divider="@drawable/reader_item_divider"
+                android:listSelector="@android:color/transparent"
+		        android:dividerHeight="1dp"  
+		        android:fadingEdge="none"  
+		        android:scrollbars="none"
+		        android:fastScrollEnabled="false"  
+		        android:footerDividersEnabled="false"  
+		        android:headerDividersEnabled="false"  
+		        android:smoothScrollbar="true" /> 
+	   	 
+
+	</LinearLayout>
+	</com.handmark.pulltorefresh.library.PullToRefreshScrollView> 
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <declare-styleable name="MyRoundImageRing">
+        <attr name="rimColor" format="color" />
+        <attr name="bgColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+    </declare-styleable>
+    
+    
+   <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_outside_color" format="color" />
+        <attr name="border_inside_color" format="color" />
+    </declare-styleable>
+    
+     <declare-styleable name="PullToRefresh">
+        <attr name="mode" format="reference" >
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+    </declare-styleable>
+    
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>    
+<RelativeLayout 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <LinearLayout
+        android:id="@+id/llayout" 
+        android:orientation="vertical"
+        android:layout_width="match_parent" 
+    	android:layout_height="wrap_content" 
+    	android:layout_alignParentTop="true" >
+
+        <TextView 
+            android:id="@+id/title"
+            android:layout_height="44dp"
+            android:background="@color/topbar_color"
+            android:layout_width="match_parent"
+            android:text="新鲜事"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+       
+        <include layout="@layout/news_top"/>
+        
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="有两条新的消息"
+            android:visibility="gone"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="buttonClick"
+            android:textColor="@color/black"
+            android:id="@+id/noticeTv"
+            android:background="#E7E7E7"/>
+       </LinearLayout>
+  
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+		        android:id="@+id/aroundNewsList"
+		        android:layout_below="@+id/llayout"
+		         android:layout_width="match_parent"  
+		        android:layout_height="match_parent" 
+		        android:scrollbars="none" 
+		        android:cacheColorHint="@android:color/transparent"
+                 android:divider="@drawable/reader_item_divider"
+                android:listSelector="@android:color/transparent"
+		        android:dividerHeight="1dp"  
+		        android:fadingEdge="none"  
+		        android:fastScrollEnabled="false"  
+		        android:footerDividersEnabled="false"  
+		        android:headerDividersEnabled="false"  
+		        android:smoothScrollbar="true" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+		        android:id="@+id/friendNewsList"
+		        android:layout_below="@+id/llayout"
+		        android:layout_width="match_parent"  
+		        android:layout_height="match_parent"  
+		        android:scrollbars="none"
+		        android:cacheColorHint="@android:color/transparent"
+		         android:divider="@drawable/reader_item_divider"
+                android:listSelector="@android:color/transparent"
+		        android:dividerHeight="1dp"  
+		        android:fadingEdge="none"  
+		        android:fastScrollEnabled="false"  
+		        android:footerDividersEnabled="false"  
+		        android:headerDividersEnabled="false"  
+		        android:smoothScrollbar="true" />
+
+        
+        <ImageView
+		      android:layout_centerInParent="true"
+		      android:id="@+id/xindicator"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_marginLeft="8dp"
+		      android:visibility="invisible"
+           	  android:background="@drawable/round_1"/>
+	
+	   <ImageButton android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/publish"
+           android:onClick="buttonClick"
+           android:layout_below="@+id/llayout"
+           android:layout_margin="5dp"
+           android:layout_alignParentRight="true"
+           android:layout_gravity="top|right"
+           android:background="@drawable/publish"/>
+	   
+</RelativeLayout>
+
+
+
+<!--  
+<?xml version="1.0" encoding="utf-8"?>    
+<RelativeLayout 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    	
+        <LinearLayout
+        android:id="@+id/llayout" 
+        android:orientation="vertical"
+        android:layout_width="match_parent" 
+    	android:layout_height="wrap_content" 
+    	android:layout_alignParentTop="true">
+        <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="#3DA996"> 
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="新鲜事"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+       </RelativeLayout> 
+        <include layout="@layout/news_top"/>
+       </LinearLayout>
+       
+  
+         <com.deng.mychat.view.MyScrollLayout    
+		  xmlns:android="http://schemas.android.com/apk/res/android"    
+		  android:id="@+id/scrollLayout"    
+		  android:layout_width="fill_parent"    
+		  android:layout_below="@id/llayout"
+		  android:layout_alignParentBottom="true" 
+		  android:layout_height="fill_parent">  
+
+	 	     <com.deng.mychat.view.MyFrame
+		 	    android:background="@color/white"
+			  	android:layout_width="fill_parent"    
+			  	android:layout_height="wrap_content">  
+	    		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			        android:id="@+id/aroundNewsList"
+			        android:layout_width="fill_parent"  
+			        android:layout_height="fill_parent"  
+			        android:cacheColorHint="@android:color/transparent"
+	                android:divider="@drawable/reader_item_divider"
+	                android:listSelector="@android:color/transparent"
+			        android:dividerHeight="1dp"  
+			        android:fadingEdge="none"  
+			        android:fastScrollEnabled="false"  
+			        android:footerDividersEnabled="false"  
+			        android:headerDividersEnabled="false"  
+			        android:smoothScrollbar="true" />
+	     </com.deng.mychat.view.MyFrame> 
+	  
+	     <com.deng.mychat.view.MyFrame
+		 	    android:background="@color/white"
+			  	android:layout_width="fill_parent"    
+			  	android:layout_height="wrap_content"> 
+	       <com.handmark.pulltorefresh.library.PullToRefreshListView
+			        android:id="@+id/friendNewsList"
+			        android:layout_width="fill_parent"  
+			        android:layout_height="fill_parent"  
+			        android:cacheColorHint="@android:color/transparent"
+	                android:divider="@drawable/reader_item_divider"
+	                android:listSelector="@android:color/transparent"
+			        android:dividerHeight="1dp"  
+			        android:fadingEdge="none"  
+			        android:fastScrollEnabled="false"  
+			        android:footerDividersEnabled="false"  
+			        android:headerDividersEnabled="false"  
+			        android:smoothScrollbar="true" />
+	    </com.deng.mychat.view.MyFrame>
+       </com.deng.mychat.view.MyScrollLayout>
+       	
+       <ImageButton android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/publish"
+           android:onClick="buttonClick"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentRight="true"
+           android:layout_margin="5dp"
+           android:layout_gravity="top|right"
+           android:background="@drawable/publish"/>" 
+</RelativeLayout> -->

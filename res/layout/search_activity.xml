@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <RelativeLayout
+        	android:id="@+id/top_layout"
+        	android:layout_width="fill_parent"
+        	android:layout_height="44dp"
+        	android:background="@color/topbar_color">
+        	<Button android:id="@+id/cancelBtn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_marginLeft="5dp"
+            	android:layout_centerVertical="true"
+            	android:onClick="buttonClick"
+            	android:clickable="true"
+            	android:textSize="@dimen/navbar_button_text_size"
+            	android:text="返回"
+            	android:background="#00000000"
+            	android:textColor="@color/white" />
+        	
+        	<TextView 
+	            android:layout_width="wrap_content"
+	      		android:layout_height="wrap_content"
+	            android:text="搜索联系人"
+	            android:layout_centerInParent="true"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/navbar_title_size"/>
+    </RelativeLayout>
+
+   
+   	 <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/smssdk_input_bg_focus"
+            android:orientation="horizontal" >
+        	<ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/img"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/search"
+                android:scaleType="fitCenter" />
+        
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_toRightOf="@+id/img"
+                android:layout_toLeftOf="@+id/iv_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:background="#00000000"
+                android:hint="用户手机号"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:clickable="true"
+                android:onClick="buttonClick"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                android:background="@drawable/smssdk_clear_search"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
+        </RelativeLayout>
+      
+   	  <ScrollView  android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+   	  <LinearLayout android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:orientation="vertical">
+    	<RelativeLayout android:layout_width="fill_parent"
+    	    android:layout_height="50dp"
+    	    android:id="@+id/searchBtn"
+    	    android:visibility="gone"
+    	    android:background="@drawable/search_btn_bg"
+    	    android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+    	    android:layout_marginTop="8dp"
+    	    android:layout_marginBottom="8dp"
+    	    android:clickable="true"
+    	    android:onClick="buttonClick">
+            
+    	    <ImageView android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:src="@drawable/abc_ic_search"
+    	        android:id="@+id/opimg"
+    	        android:layout_centerVertical="true"
+    	        android:layout_alignParentLeft="true"
+    	        android:layout_marginLeft="10dp"/>
+    	    
+    	    <TextView android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:textColor="@color/black"
+    	        android:layout_toRightOf="@+id/opimg"
+    	        android:layout_marginLeft="8dp"
+    	        android:id="@+id/tva"
+    	        android:layout_centerVertical="true"
+    	        android:text="搜索:"
+    	        android:textSize="18dp"/>
+    	    
+    	      <TextView android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:id="@+id/searchMobile"
+    	        android:textColor="@color/green"
+    	        android:layout_toRightOf="@+id/tva"
+    	        android:layout_marginLeft="8dp"
+    	        android:layout_centerVertical="true"
+    	        android:text="13545236532"
+    	        android:textSize="18dp"/>
+    	</RelativeLayout>
+
+   <LinearLayout android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:orientation="vertical"
+       android:visibility="gone"
+       android:id="@+id/sugestionList">
+    <View android:layout_width="fill_parent"
+       android:layout_height="15dp"
+       android:background="#EAEAEA"/>
+    <TextView android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="20dp"
+       android:textSize="16dp"
+       android:text="手机通讯录"/>
+    <View android:layout_width="fill_parent"
+       android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+        android:background="#EAEAEA"/>"
+   	<com.deng.mychat.view.MyListView 
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+			android:id="@+id/mList"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:cacheColorHint="@android:color/transparent"
+	        android:divider="#EAEAEA"
+			android:dividerHeight="1dp"/>
+    </LinearLayout>
+   </LinearLayout>
+   </ScrollView>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/title"
+        android:layout_height="44dp"
+        android:background="#3DA996"
+        android:layout_width="match_parent"
+        android:text="好友请求"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/navbar_title_size"/>
+    
+     <ListView
+         android:layout_marginTop="10dp"
+         android:layout_marginBottom="10dp"
+		  android:id="@+id/listView"
+		  android:layout_below="@+id/title"
+		  android:layout_width="fill_parent"  
+		  android:layout_height="fill_parent"  
+		  android:cacheColorHint="@android:color/transparent"
+          android:divider="@drawable/reader_item_divider"
+          android:listSelector="@android:color/transparent"
+		  android:dividerHeight="1dp"  
+		  android:fadingEdge="none"  
+		  android:fastScrollEnabled="false"  
+		  android:footerDividersEnabled="false"  
+		  android:headerDividersEnabled="false"  
+		  android:smoothScrollbar="true" />
+     
+      <ImageView
+		      android:layout_centerInParent="true"
+		      android:id="@+id/xindicator"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_marginLeft="8dp"
+		      android:visibility="invisible"
+           	  android:background="@drawable/round_1"/>
+
+</RelativeLayout>

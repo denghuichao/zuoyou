@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.deng.mychat.view.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.saicmotor.telematicsas"
+     xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:onClick="buttonClick"
+    android:id="@+id/top_ll"
+    android:orientation="vertical" >
+     
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/head_ly"
+        android:layout_alignParentTop="true">
+    
+    <ImageView 
+        android:id="@+id/headbg"
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:background="@drawable/theme"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"/>
+    
+<!--      <View -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:background="@color/aquamarine" -->
+<!--         android:alpha="0.5" -->
+<!--         android:layout_below="@+id/headbg" -->
+<!--         android:id="@+id/fenge_1" -->
+<!--         android:layout_height="15dp" /> -->
+    
+<!--      <FrameLayout android:layout_width="fill_parent" -->
+<!--          android:layout_height="wrap_content" -->
+<!--          android:layout_marginTop="-48dp" -->
+<!--          android:layout_below="@+id/fenge_1" -->
+<!--          android:gravity="center"> -->
+<!-- 	     <View -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:background="@color/ivory" -->
+<!-- 	        android:id="@+id/fenge" -->
+<!-- 	        android:layout_gravity="center" -->
+<!-- 	        android:layout_height="15dp" /> -->
+	     
+<!-- 	         <ImageView -->
+<!-- 		        android:id="@+id/head" -->
+<!-- 		        android:layout_width="84dp" -->
+<!-- 		        android:layout_height="84dp" -->
+<!-- 		        android:layout_centerInParent="true" -->
+<!-- 		        android:layout_gravity="center" -->
+<!-- 				android:scaleType="fitXY" -->
+<!--             	android:src="@drawable/avatar_placeholder" /> -->
+
+	    
+<!-- 	      <ImageView -->
+<!-- 	        android:layout_alignParentTop="true" -->
+<!-- 	        android:layout_width="88dp" -->
+<!-- 	        android:layout_height="88dp" -->
+<!-- 	        android:scaleType="fitXY" -->
+<!-- 	        android:layout_margin="0dp" -->
+<!-- 	        android:src="@drawable/circle" -->
+<!-- 	        android:layout_gravity="center" -->
+<!-- 	       /> -->
+<!--      </FrameLayout> -->
+	</RelativeLayout> 
+      
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+       android:background="@drawable/edittext_bg"
+        android:gravity="center_vertical"
+        android:layout_below="@id/head_ly"
+        android:id="@+id/useracount_ly"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="7dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/login_evbg"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/login_user_icon" />
+
+        <View
+            android:layout_width="@dimen/line_height"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/login_line_padding_vertical"
+            android:layout_marginRight="@dimen/login_line_padding_horizontal"
+            android:layout_marginTop="@dimen/login_line_padding_vertical"
+            android:background="@color/line_bg" />
+
+        <EditText
+            android:id="@+id/editTextAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/translucence"
+            android:digits="@string/edit_text_type"
+            android:inputType="phone"
+            android:hint="@string/login_username_hint"
+            android:maxLength="@string/max_length_username"
+            android:singleLine="true"
+            android:textColor="@color/text_color" />
+     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext_bg"
+        android:gravity="center_vertical"
+        android:id="@+id/userpass_ly"
+        android:layout_below="@id/useracount_ly"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/login_evbg"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/login_password_icon" />
+
+        <View
+            android:layout_width="@dimen/line_height"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/login_line_padding_vertical"
+            android:layout_marginRight="@dimen/login_line_padding_horizontal"
+            android:layout_marginTop="@dimen/login_line_padding_vertical"
+            android:background="@color/line_bg" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/translucence"
+            android:digits="@string/edit_text_type"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:maxLength="@string/max_length_password"
+            android:textColor="@color/text_color" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_below="@id/userpass_ly"
+       	android:gravity="center"
+      	android:singleLine="true"
+      	android:textSize="@dimen/button_textsize"
+        android:textColor="@color/white"
+        android:enabled="true"
+        android:background="@drawable/login_btn_selector"
+        android:onClick="buttonClick"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/login_title" />
+
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="48dp"
+         android:layout_gravity="bottom"
+         android:id="@+id/bottom_ll"
+         android:layout_alignParentBottom="true"
+         android:background="@drawable/bottom_bg"
+         android:gravity="center" >
+         <TextView 
+           android:id="@+id/registerButton"
+           android:layout_height="fill_parent"
+           android:layout_width="wrap_content"
+           android:gravity="center"
+           android:text="注册"
+           android:layout_alignParentLeft="true"
+           android:layout_weight="1"
+           android:textSize="@dimen/tbutton_text_size"
+           android:clickable="true"
+           android:onClick="buttonClick"
+        />
+	 
+	  <TextView 
+           android:id="@+id/forgetButton"
+           android:layout_height="fill_parent"
+           android:layout_width="wrap_content"
+           android:gravity="center"
+           android:text="找回密码"
+           android:layout_weight="1"
+           android:layout_alignParentRight="true"
+           android:textSize="@dimen/tbutton_text_size"
+       	   android:clickable="true"
+           android:onClick="buttonClick"
+        />        
+     </LinearLayout>
+   
+</com.deng.mychat.view.MyRelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+      <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/top_layout"
+        android:background="@color/topbar_color"> 
+         <Button android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:onClick="buttonClick"
+            android:clickable="true"
+            android:text="返回"
+            android:background="#00000000"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+          
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="管理"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+       </RelativeLayout> 
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/top_layout">
+        
+     <Button android:layout_width="fill_parent"
+	    	 android:layout_height="48dp"
+	    	 android:layout_marginLeft="20dp"
+	    	 android:layout_marginRight="20dp" 
+	    	 android:layout_marginBottom="5dp"
+	    	 android:textSize="@dimen/button_textsize"
+			android:textColor="@color/white"
+			android:background="@drawable/orange_btn_selector"
+	    	 android:id="@+id/delBtn"
+	    	 android:text="删除好友"
+	    	 android:onClick="buttonClick"/>
+     
+      <Button android:layout_width="fill_parent"
+	    	 android:layout_height="48dp"
+	    	 android:layout_marginLeft="20dp"
+	    	 android:layout_marginRight="20dp"
+	    	 android:layout_marginTop="5dp"
+	    	 android:layout_marginBottom="5dp" 
+	    	android:textSize="@dimen/button_textsize"
+			 android:textColor="@color/white"
+			 android:background="@drawable/orange_btn_selector"
+	    	 android:id="@+id/blackBtn"
+	    	 android:text="加入黑名单"
+	    	 android:onClick="buttonClick"/>
+      
+	  <Button android:layout_width="fill_parent"
+	    	 android:layout_height="48dp"
+	    	 android:layout_marginLeft="20dp"
+	    	 android:layout_marginRight="20dp"
+	    	 android:textSize="@dimen/button_textsize"
+			  android:textColor="@color/white"
+			 android:background="@drawable/orange_btn_selector"
+	    	 android:id="@+id/jubaoBtn"
+	    	 android:text="举报"
+	    	 android:layout_marginTop="5dp"
+	    	 android:onClick="buttonClick"/>  
+	    	 </LinearLayout>
+</RelativeLayout>

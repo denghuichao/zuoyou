@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.deng.mychat.image_viewer.HackyViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="bottom">
+        
+        <TextView
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="17dp"
+        android:textColor="@android:color/white"
+        android:text="@string/viewpager_indicator"
+        android:background="@android:color/transparent" />
+        
+        <ImageButton android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="#00000000"
+        android:id="@+id/download"
+        android:onClick="btnClick"
+        android:src="@drawable/download_btn_selector"
+        />
+        
+    </RelativeLayout>
+    
+
+</FrameLayout>

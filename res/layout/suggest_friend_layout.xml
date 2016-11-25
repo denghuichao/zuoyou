@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f0f0e0" >
+      <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:id="@+id/top_layout"
+        android:background="@color/topbar_color"> 
+         <Button android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:onClick="buttonClick"
+            android:clickable="true"
+            android:text="返回"
+            android:background="#00000000"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+          
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="推荐好友"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+       </RelativeLayout> 
+	    <ScrollView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/top_layout">
+        <LinearLayout android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_height="fill_parent">
+	    <LinearLayout android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:orientation="horizontal"
+	         android:layout_marginTop="20dp"
+	         android:id="@+id/image_layout"
+	         android:layout_marginLeft="5dp"
+	         android:layout_marginRight="5dp">
+             <RelativeLayout android:layout_width="fill_parent"
+	             android:orientation="vertical"
+	             android:layout_height="wrap_content"
+	             android:layout_weight="1">
+	           
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:id="@+id/name1"
+	                android:textSize="20dp"
+	                android:textStyle="bold"
+	                android:textColor="@color/black"
+	                android:text="张三"
+	                android:gravity="center"/>
+	            
+	             <ImageView android:layout_width="fill_parent"
+	                android:layout_height="200dp"
+	                android:background="@drawable/pic_frame"
+	                android:scaleType="fitXY"
+	                android:id="@+id/user_icon1"
+	                android:layout_gravity="center"
+	                android:layout_below="@id/name1"/>
+	         </RelativeLayout>
+	         
+	           <RelativeLayout android:layout_width="fill_parent"
+	             android:orientation="vertical"
+	             android:layout_height="wrap_content"
+	             android:layout_marginLeft="5dp"
+	             android:layout_weight="1">
+	           
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:id="@+id/name2"
+	                android:textSize="20dp"
+	                android:textStyle="bold"
+	                android:textColor="@color/black"
+	                android:text="李四"
+	                android:gravity="center"/>
+	            
+	             <ImageView android:layout_width="fill_parent"
+	                android:layout_height="200dp"
+	                android:background="@drawable/pic_frame"
+	                android:scaleType="fitXY"
+	                android:id="@+id/user_icon2"
+	                android:layout_gravity="center"
+	                android:layout_below="@id/name2"/>
+	             
+	              <ImageView
+		            android:layout_centerInParent="true"
+		            android:id="@+id/xindicator"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@+id/titleBarView"
+		            android:layout_marginLeft="8dp"
+		            android:visibility="invisible"
+           		    android:background="@drawable/round_1"/>
+	              
+	         </RelativeLayout>
+	     </LinearLayout>
+	     
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:id="@+id/opll"
+	        android:layout_below="@id/image_layout">
+	         
+	       <RelativeLayout  android:layout_width="fill_parent"
+	             android:layout_height="wrap_content"
+	             android:layout_margin="20dp"
+	             android:background="@drawable/circle"
+	             android:layout_weight="1">
+	         <LinearLayout android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_centerInParent="true"
+	             android:orientation="vertical"
+	             android:id="@+id/friendButton"
+	             android:clickable="true"
+	             android:onClick="buttonClick">
+	             <TextView android:layout_width="fill_parent"
+	                 android:gravity="center"
+	                 android:layout_height="wrap_content"
+	                 android:textSize="20dp"
+	                 android:textColor="@color/black"
+	                 android:text="好友"/>
+	             
+		        <ImageView android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:src="@drawable/game"
+		            android:scaleType="centerInside"/>
+	        </LinearLayout>
+	        </RelativeLayout>
+	        
+	         <RelativeLayout  android:layout_width="fill_parent"
+	             android:layout_height="wrap_content"
+	             android:layout_margin="20dp"
+	             android:background="@drawable/circle"
+	             android:layout_weight="1">
+	         <LinearLayout android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_centerInParent="true"
+	             android:orientation="vertical"
+	             android:id="@+id/loverButton"
+	             android:clickable="true"
+	             android:onClick="buttonClick">
+		        <TextView android:layout_width="fill_parent"
+	                 android:gravity="center"
+	                 android:layout_height="wrap_content"
+	                 android:textSize="20dp"
+	                 android:textColor="@color/black"
+	                 android:text="恋人"/>
+	             
+		        <ImageView android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:src="@drawable/lover"
+		             android:scaleType="centerInside"/>
+	        </LinearLayout>
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	     <Button android:layout_width="fill_parent"
+	    	  android:layout_height="48dp"
+	    	  android:layout_marginLeft="20dp"
+	    	  android:layout_marginRight="20dp"
+	    	  android:layout_marginTop="10dp"
+	    	  android:layout_marginBottom="20dp"
+	    	  android:background="@drawable/login_btn_selector"
+	    	  android:id="@+id/change_btn"
+	    	  android:text="换一组"
+	    	  android:layout_below="@+id/opll"
+	    	  android:textSize="18dp"
+	    	  android:textColor="@color/white"
+	    	  android:onClick="buttonClick"/>
+	    </LinearLayout>
+	    </ScrollView>
+	</RelativeLayout>

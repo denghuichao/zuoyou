@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+   		android:layout_height="fill_parent"
+    	android:background="@color/white"
+    	android:orientation="vertical" >
+    	<RelativeLayout
+        	android:id="@+id/top_layout"
+        	android:layout_width="fill_parent"
+        	android:layout_height="44dp"
+        	android:background="@color/topbar_color">
+        	<Button android:id="@+id/cancelBtn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_marginLeft="10dp"
+            	android:layout_centerVertical="true"
+            	android:onClick="buttonClick"
+            	android:clickable="true"
+            	android:textSize="@dimen/navbar_button_text_size"
+            	android:text="返回"
+            	android:background="#00000000"
+            	android:textColor="@color/white" />
+        	
+        	<TextView 
+	            android:layout_width="wrap_content"
+	      		android:layout_height="wrap_content"
+	            android:text="个人主页"
+	            android:layout_centerInParent="true"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/navbar_title_size"/>
+        	
+        	<Button
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentRight="true"
+            	android:layout_marginRight="21dp"
+            	android:background="#00000000"
+            	android:layout_centerVertical="true"
+            	android:textSize="@dimen/navbar_button_text_size"
+            	android:text="设置"
+            	android:onClick="buttonClick"
+            	android:id="@+id/set_btn"
+            	android:clickable="true"
+            	android:textColor="@color/white"/>
+    	</RelativeLayout>
+    	
+       <ScrollView android:layout_width="fill_parent"
+    	    android:layout_height="fill_parent">
+            <LinearLayout android:layout_width="fill_parent"
+    	    android:layout_height="fill_parent"
+    	    android:orientation="vertical">
+	    	<RelativeLayout android:layout_width="fill_parent"
+	    	    android:layout_height="200dp"
+	    	    android:id="@+id/top_img_ll">
+	    	     <ImageView 
+			        android:id="@+id/head_bg"
+			        android:layout_alignParentTop="true"
+			        android:layout_width="fill_parent"
+			        android:layout_height="200dp"
+			        android:clickable="true"
+	    	        android:onClick="buttonClick"
+			        android:scaleType="fitXY"
+			        android:background="@drawable/theme"
+			        android:layout_centerHorizontal="true"/>
+ 
+	    	    <ImageView android:layout_width="96dp"
+	    	        android:layout_height="96dp"
+	    	        android:id="@+id/head"
+	    	        android:scaleType="fitXY"
+	    	        android:clickable="true"
+	    	        android:onClick="buttonClick"
+	    	        android:layout_marginTop="30dp"
+					android:layout_centerHorizontal="true"/>
+	    	    <TextView android:layout_width="wrap_content"
+	    	        android:layout_height="wrap_content"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/white"
+	    	        android:layout_below="@+id/head"
+	    	        android:textStyle="bold"
+	    	        android:id="@+id/name"
+	    	        android:layout_marginTop="10dp"
+	    	        android:layout_centerHorizontal="true"
+	    	        android:text=""/>
+	    	    <TextView android:layout_width="wrap_content"
+	    	        android:layout_height="wrap_content"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/white"
+	    	        android:layout_below="@+id/name"
+	    	        android:textStyle="bold"
+	    	        android:id="@+id/des"
+	    	        android:layout_centerHorizontal="true"
+	    	        android:text=""/>
+	    	</RelativeLayout>  
+	    	<RelativeLayout android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_marginTop="20dp"
+	    	    android:visibility="gone"
+	    	    android:orientation="horizontal">
+	    	    <ImageView android:layout_width="32dp"
+	    	        android:layout_height="32dp"
+	    	        android:layout_marginLeft="10dp"
+	    	        android:layout_centerVertical="true"
+	    	        android:layout_marginRight="6dp"
+	    	        android:layout_alignParentLeft="true"
+	    	        android:gravity="center"
+	    	        android:id="@+id/sign_ll_icon"
+	    	        android:src="@drawable/sign"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/black"
+	    	        android:id="@+id/sign_text"
+	    	        android:text="个性签名"
+	    	        android:gravity="center|right"
+	    	        android:layout_toRightOf="@+id/sign_ll_icon"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:textSize="16dp"
+	    	        android:text=""
+	    	        android:id="@+id/sign_content"
+	    	        android:singleLine="true"
+	    	        android:gravity="center|left"
+	    	         android:clickable="true"
+	    	    	android:onClick="buttonClick"
+	    	        android:layout_marginLeft="8dp"
+	    	        android:layout_toRightOf="@+id/sign_text"/>
+	    	    <View android:layout_height="1dp"
+	    	        android:layout_width="fill_parent"
+	    	        android:background="#80CCCCCC"
+	    	        android:layout_below="@+id/sign_content"
+	    	        android:layout_toRightOf="@+id/sign_ll_icon"/>
+	    	</RelativeLayout>
+	    	
+	    	<RelativeLayout android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_marginTop="5dp"
+	    	    android:orientation="horizontal">
+	    	    <ImageView android:layout_width="28dp"
+	    	        android:layout_height="28dp"
+	    	         android:layout_centerVertical="true"
+	    	        android:layout_marginLeft="10dp"
+	    	        android:layout_marginRight="6dp"
+	    	        android:layout_alignParentLeft="true"
+	    	        android:gravity="center"
+	    	        android:id="@+id/school_ll_icon"
+	    	        android:src="@drawable/shcool"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:layout_marginLeft="5dp"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/black"
+	    	        android:id="@+id/school_text"
+	    	        android:text="学校"
+	    	        android:gravity="center|right"
+	    	        android:layout_toRightOf="@+id/school_ll_icon"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:textSize="16dp"
+	    	        android:text=""
+	    	        android:clickable="true"
+	    	        android:onClick="buttonClick"
+	    	        android:id="@+id/school_content"
+	    	        android:singleLine="true"
+	    	        android:gravity="center|left"
+	    	        android:layout_marginLeft="8dp"
+	    	        android:layout_toRightOf="@+id/school_text"/>
+	    	    <View android:layout_height="1dp"
+	    	        android:layout_width="fill_parent"
+	    	        android:background="#80CCCCCC"
+	    	        android:layout_below="@+id/school_content"
+	    	        android:layout_toRightOf="@+id/school_ll_icon"/>
+	    	</RelativeLayout>
+	    	
+	    	<RelativeLayout android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_marginTop="5dp"
+	    	    android:orientation="horizontal">
+	    	    <ImageView android:layout_width="28dp"
+	    	        android:layout_height="28dp"
+	    	        android:layout_marginLeft="10dp"
+	    	        android:layout_marginRight="6dp"
+	    	        android:layout_alignParentLeft="true"
+	    	        android:layout_centerVertical="true"
+	    	        android:gravity="top"
+	    	        android:id="@+id/label_ll_icon"
+	    	        android:src="@drawable/label"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:layout_marginLeft="5dp"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/black"
+	    	        android:id="@+id/label_text"
+	    	        android:text="标签"
+	    	        android:gravity="center|right"
+	    	        android:layout_toRightOf="@+id/label_ll_icon"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:textSize="16dp"
+	    	        android:text=""
+	    	        android:id="@+id/label_content"
+	    	        android:onClick="buttonClick"
+	    	         android:clickable="true"
+	    	        android:singleLine="true"
+	    	        android:gravity="center|left"
+	    	        android:layout_marginLeft="8dp"
+	    	        android:layout_toRightOf="@+id/label_text"/>
+	    	    <View android:layout_height="1dp"
+	    	        android:layout_width="fill_parent"
+	    	        android:background="#80CCCCCC"
+	    	        android:layout_below="@+id/label_content"
+	    	        android:layout_toRightOf="@+id/label_ll_icon"/>
+	    	</RelativeLayout>
+	    	
+	    	
+	    	<RelativeLayout android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_marginTop="5dp"
+	    	    android:clickable="true"
+	    	    android:id="@+id/zujiBtn"
+	    	    android:onClick="buttonClick"
+	    	    android:orientation="horizontal">
+	    	    <ImageView android:layout_width="28dp"
+	    	        android:layout_height="48dp"
+	    	        android:layout_marginLeft="10dp"
+	    	        android:layout_marginRight="6dp"
+	    	        android:gravity="center"
+	    	        android:scaleType="fitCenter"
+	    	        android:layout_alignParentLeft="true"
+	    	        android:id="@+id/zuji_ll_icon"
+	    	        android:src="@drawable/zuji"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:layout_marginLeft="5dp"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/black"
+	    	        android:id="@+id/zuji_text"
+	    	        android:text="足迹"
+	    	        android:gravity="center|right"
+	    	        android:layout_toRightOf="@+id/zuji_ll_icon"/>
+			     <GridView 
+			        android:id="@+id/zuji_pic_gridview"
+			        android:layout_toRightOf="@+id/zuji_text"
+			        android:layout_width="fill_parent"
+			        android:layout_height="70dp"
+			        android:layout_marginLeft="8dp"
+			        android:horizontalSpacing="2dp"  
+			        android:gravity="left"     
+			        android:numColumns="4"
+			        android:fadingEdge="none"
+			        android:scrollbars="none"
+			        android:verticalSpacing="2dp" >
+		        </GridView>
+	    	    <View android:layout_height="1dp"
+	    	        android:layout_width="fill_parent"
+	    	        android:background="#80CCCCCC"
+	    	        android:layout_marginTop="5dp"
+	    	        android:layout_below="@+id/zuji_pic_gridview"
+	    	        android:layout_toRightOf="@+id/zuji_ll_icon"/>
+	    	</RelativeLayout>
+	    	
+	    	<RelativeLayout android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_marginTop="5dp"
+	    	     android:visibility="gone"
+	    	     android:id="@+id/report_ll"
+	    	     android:onClick="buttonClick"
+	    	    android:orientation="horizontal">
+	    	    <ImageView android:layout_width="28dp"
+	    	        android:layout_height="48dp"
+	    	        android:layout_marginLeft="10dp"
+	    	        android:layout_marginRight="6dp"
+	    	        android:gravity="center"
+	    	        android:layout_alignParentLeft="true"
+	    	        android:id="@+id/report_ll_icon"
+	    	        android:src="@drawable/friend_report"/>
+	    	    <TextView android:layout_height="48dp"
+	    	        android:layout_width="wrap_content"
+	    	        android:layout_marginLeft="5dp"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/black"
+	    	        android:id="@+id/report_text"
+	    	        android:text="好友报告"
+	    	        android:gravity="center|right"
+	    	        android:layout_toRightOf="@+id/report_ll_icon"/>
+			   
+	    	     <ImageButton android:layout_width="32dp"
+	    	        android:layout_height="48dp"
+	    	        android:layout_marginLeft="10dp"
+	    	        android:layout_marginRight="6dp"
+	    	        android:gravity="center"
+	    	        android:background="@null"
+	    	        android:layout_alignParentRight="true"
+	    	        android:id="@+id/open_report"
+	    	        android:onClick="buttonClick"
+	    	        android:src="@drawable/right_open"/>
+	    	    
+	    	    <View android:layout_height="1dp"
+	    	        android:layout_width="fill_parent"
+	    	        android:background="#80CCCCCC"
+	    	        android:layout_marginTop="5dp"
+	    	        android:layout_below="@+id/report_text"
+	    	        android:layout_toRightOf="@+id/report_ll_icon"/>
+	    	</RelativeLayout>
+	    	
+	    	<LinearLayout android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_marginTop="30dp"
+	    	    android:orientation="vertical"
+	    	    android:id="@+id/my_page_opll">
+	    	    <Button android:layout_width="fill_parent"
+	    	        android:layout_height="48dp"
+	    	        android:layout_marginLeft="20dp"
+	    	        android:layout_marginRight="20dp"
+	    	        android:background="@drawable/white_btn"
+	    	        android:id="@+id/edit_btn"
+	    	        android:text="编辑个人资料"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/deepskyblue"
+	    	        android:onClick="buttonClick"/>
+	    	    
+	    	    <Button android:layout_width="fill_parent"
+	    	        android:layout_height="48dp"
+	    	        android:layout_marginLeft="20dp"
+	    	        android:layout_marginRight="20dp"
+	    	        android:layout_marginTop="10dp"
+	    	        android:layout_marginBottom="10dp"
+	    	        android:background="@drawable/login_btn_selector"
+	    	        android:id="@+id/publish_btn"
+	    	        android:text="发布新鲜事"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/white"
+	    	        android:onClick="buttonClick"/>
+	    	</LinearLayout>
+	    	
+	    	
+	    	<LinearLayout android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_marginTop="30dp"
+	    	    android:orientation="vertical"
+	    	    android:visibility="gone"
+	    	    android:id="@+id/contact_page_opll">
+	    	    
+	    	      <Button android:layout_width="fill_parent"
+	    	        android:layout_height="48dp"
+	    	        android:layout_marginLeft="20dp"
+	    	        android:layout_marginRight="20dp"
+	    	        
+	    	        android:background="@drawable/login_btn_selector"
+	    	        android:id="@+id/chat_btn"
+	    	        android:text="发消息"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/white"
+	    	        android:onClick="buttonClick"/>
+	    	    <Button android:layout_width="fill_parent"
+	    	        android:layout_height="48dp"
+	    	        android:layout_marginLeft="20dp"
+	    	        android:layout_marginRight="20dp"
+	    	        android:background="@drawable/white_btn"
+	    	        android:id="@+id/tuijian_btn"
+	    	        android:text="推荐好友"
+	    	        android:layout_marginTop="10dp"
+	    	         android:layout_marginBottom="10dp"
+	    	        android:textSize="18dp"
+	    	        android:textColor="@color/deepskyblue"
+	    	        android:onClick="buttonClick"/>    
+	    	</LinearLayout>
+
+    	</LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

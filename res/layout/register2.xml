@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    android:scrollbars="none">
+    
+     <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/topbar_color"> 
+        <Button
+           android:id="@+id/cancelButton"
+           android:layout_width="80dp"
+           android:layout_height="44dp"
+           android:background="@null"
+           android:layout_centerVertical="true"
+           android:text="取消"
+           android:textColor="@color/white"
+           android:textSize="@dimen/navbar_button_text_size"
+           android:layout_alignParentLeft="true"
+           android:drawablePadding="2dp"
+		   android:paddingRight="12dp"
+		   android:onClick="buttonClick"
+          />
+         
+        <TextView 
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="用户信息"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"
+          />
+        
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="80dp"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_button_text_size"
+           	android:layout_alignParentRight="true"
+           	android:drawablePadding="2dp"
+			android:paddingRight="12dp"
+			android:onClick="buttonClick"
+          />
+    </RelativeLayout>
+    
+    <ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/white"
+	    android:scrollbars="none">
+        <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+	<FrameLayout android:layout_width="120dp"
+	    android:layout_height="120dp"
+	    android:layout_marginTop="20dp"
+	    android:clickable="true"
+	    android:onClick="setImage"
+	    android:layout_gravity="center">
+	    <ImageView 
+	    android:id="@+id/setUserLogo"
+	    android:layout_width="120dp"
+	    android:layout_height="120dp"
+	    android:clickable="true"
+	    android:scaleType="centerCrop"
+	    android:src="@drawable/upload_head"
+	    android:onClick="setImage"/>	 
+<!-- 	    <ImageView  -->
+<!-- 	    android:layout_width="120dp" -->
+<!-- 	    android:layout_height="120dp" -->
+<!-- 	    android:id="@+id/addPicBtn" -->
+<!-- 	    android:scaleType="centerCrop" -->
+<!-- 	    android:clickable="true" -->
+<!-- 	    android:src="@drawable/bt_add_pic" -->
+<!-- 	    android:onClick="setImage"/> -->
+	</FrameLayout>
+	
+	<EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_height="45dp"
+        android:ems="11"
+        android:hint="姓名:留真名才有更多朋友能找到你哦"
+        android:singleLine="true"
+        android:textColorHint="#8f8f8f"
+        android:textColor="#222222"
+        android:textSize="@dimen/edit_text_size" 
+    />
+	
+		<EditText
+        android:id="@+id/birthday"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_height="45dp"
+        android:ems="11"
+        android:hint="生日:"
+        android:singleLine="true"
+        android:textColorHint="#8f8f8f"
+        android:textColor="#222222"
+        android:textSize="@dimen/edit_text_size" 
+        android:focusable="true"
+    />
+	
+	<Spinner 
+	   android:id="@+id/selectSex"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_height="48dp"
+        android:hint="性别"
+        android:entries="@array/sex_list"
+        android:textColorHint="#8f8f8f"
+        android:textColor="#222222"
+        android:textSize="@dimen/edit_text_size" />
+	
+	
+	<EditText 
+	  	android:id="@+id/schoolName"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_height="48dp"
+        android:entries="@array/school_list"
+        android:hint="学校"
+        android:singleLine="true"
+        android:textColorHint="#8f8f8f"
+        android:textColor="#222222"
+        android:textSize="@dimen/edit_text_size" />
+	
+	<EditText
+        android:id="@+id/schoolday"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_height="45dp"
+        android:ems="11"
+        android:hint="入学时间:"
+        android:singleLine="true"
+        android:textColorHint="#8f8f8f"
+        android:textColor="#222222"
+        android:textSize="@dimen/edit_text_size" 
+        android:focusable="true"
+     />
+	
+      <Button android:id="@+id/selectLabelBtn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="44dp"
+	    android:textSize="@dimen/button_textsize"
+        android:textColor="@color/white"
+	    android:background="@drawable/orange_btn_selector"
+	    android:onClick="buttonClick"
+	     android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+	    android:text="选择我的兴趣标签"/>  
+	    
+       <Button
+        android:id="@+id/finishBtn"
+       	android:gravity="center"
+      	android:singleLine="true"
+      	android:textSize="@dimen/button_textsize"
+        android:textColor="@color/white"
+        android:enabled="true"
+        android:background="@drawable/login_btn_selector"
+        android:onClick="buttonClick"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="完成" />
+  </LinearLayout>
+  </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+   		android:layout_height="fill_parent"
+    	android:background="@color/white"
+    	android:orientation="vertical" >
+    	<RelativeLayout
+        	android:id="@+id/top_layout"
+        	android:layout_width="fill_parent"
+        	android:layout_height="44dp"
+        	android:background="@color/topbar_color">
+        	<Button android:id="@+id/cancelBtn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_marginLeft="6dp"
+            	android:layout_centerVertical="true"
+            	android:onClick="buttonClick"
+            	android:clickable="true"
+            	android:textSize="@dimen/navbar_button_text_size"
+            	android:text="返回"
+            	android:background="#00000000"
+            	android:textColor="@color/white" />
+        	
+        	<TextView 
+	            android:layout_width="wrap_content"
+	      		android:layout_height="wrap_content"
+	            android:text="推荐好友"
+	            android:layout_centerInParent="true"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/navbar_title_size"/>
+        	</RelativeLayout>
+        	
+    	<TextView android:layout_width="fill_parent"
+    	    android:layout_height="fill_parent"
+    	    android:gravity="center"
+    	    android:textSize="20dp"
+    	    android:text="功能开发中，敬请期待..."/>
+
+</LinearLayout>
+

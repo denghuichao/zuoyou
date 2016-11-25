@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    
+     <RelativeLayout 
+          android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:id="@+id/chat_notice"
+			android:paddingTop="2dp"
+			android:paddingBottom="8dp"
+	       android:gravity="center">
+    <TextView
+        android:id="@+id/alpha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        android:paddingLeft="10dip"
+        android:textColor="#999999"
+        android:visibility="gone" />
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+        >
+        <ImageView 
+        android:id="@+id/avatarImageView"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/avatar_placeholder"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        />
+        
+        <TextView
+  	         android:id="@+id/paopao"
+		   	 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:layout_alignParentTop="true"
+			 android:layout_toRightOf="@+id/avatarImageView"
+			 android:layout_marginLeft="-10dp"
+		   	 android:background="@drawable/bubble"
+			 android:gravity="center"
+			 android:text="20"
+			 android:textColor="@color/white"
+			 android:textSize="11dp" />
+    
+    <TextView 
+        android:id="@+id/title"
+        android:layout_toRightOf="@+id/avatarImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dp"
+         android:textSize="@dimen/contact_title_text_size"
+         android:textColor="@color/black"
+        android:text="DHHHCC"
+        android:singleLine="true"
+        />
+    
+    <TextView 
+        android:id="@+id/time"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/title"
+        android:layout_toRightOf="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:textSize="14dp"
+        android:textColor="#999999"
+        android:text="xiawu 11:14"
+        android:gravity="center_vertical|right"
+        android:singleLine="true"
+        />
+    
+    <TextView 
+        android:id="@+id/des"
+        android:layout_below="@+id/title"
+        android:layout_alignLeft="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:textSize="16dp"
+        android:text="本来就笨，你还要打我。。。 "
+        />
+    
+    	
+    </RelativeLayout>
+    
+ </RelativeLayout>
+</FrameLayout>

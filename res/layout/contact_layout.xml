@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:background="@color/white"
+	  	android:layout_width="fill_parent"  
+	  	android:layout_height="fill_parent"
+	  	android:orientation="vertical" > 
+
+       
+	  <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/topbar_color"> 
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="联系人"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+       </RelativeLayout>  
+       
+       <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrMode="both" >
+       <LinearLayout android:layout_width="fill_parent"  
+	  	android:layout_height="fill_parent"
+	  	android:orientation="vertical" >
+	   <RelativeLayout android:layout_width="fill_parent"
+	       android:layout_height="40dp"
+	       android:layout_marginTop="8dp"
+	       android:layout_marginBottom="8dp"
+	       android:layout_marginLeft="10dp"
+	       android:layout_marginRight="10dp"
+	       android:gravity="center"
+	       android:clickable="true"
+	       android:id="@+id/search_ll"
+	       android:onClick="buttonClick"
+	       android:background="@drawable/search_bg">
+	       <LinearLayout android:layout_width="wrap_content"
+	           android:layout_height="fill_parent"
+	           android:orientation="horizontal"
+	           android:layout_centerInParent="true">
+	           <ImageView android:layout_width="20dp"
+	           android:layout_height="fill_parent"
+	           android:layout_marginRight="5dp"
+	           android:id="@+id/serchimg"
+	           android:src="@drawable/search"/>"
+	           <TextView android:layout_width="wrap_content"
+	           android:layout_height="fill_parent"
+	           android:gravity="center"
+	           android:clickable="false"
+	           android:id="@+id/serchtext"
+	           android:text="搜索"
+	           android:textSize="18dp"
+	           android:background="#00000000"/>
+	       </LinearLayout>
+	   </RelativeLayout>
+	   
+	    <Button android:id="@+id/noticeBtn"
+				    android:layout_width="fill_parent"
+				    android:layout_height="44dp"
+				    android:textSize="@dimen/button_textsize"
+			        android:textColor="@color/white"
+				    android:background="@drawable/orange_btn_selector"
+				    android:onClick="buttonClick"
+				    android:visibility="gone"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:layout_marginBottom="10dp"
+				    android:text="新的朋友"/>  
+	   <View android:layout_width="fill_parent"
+	       android:layout_height="1dp"
+	       android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	       android:background="#CCCCCC"/>
+	   <com.deng.mychat.view.MyExpandableListView
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+		android:id="@+id/expandableList"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:childDivider="@android:color/transparent"
+		android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/reader_item_divider"
+        android:listSelector="@android:color/transparent"
+		android:dividerHeight="1dip"/>
+	   <View android:layout_width="fill_parent"
+	       android:layout_height="1dp"
+	       android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	       android:background="#80CCCCCC"/> 
+	</LinearLayout>
+	</com.handmark.pulltorefresh.library.PullToRefreshScrollView> 
+</LinearLayout>

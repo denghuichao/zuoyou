@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+     <RelativeLayout 
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/topbar_color"> 
+        <TextView 
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+            android:text="分享到左右"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navbar_title_size"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:id="@+id/send"
+            android:text="发送"
+            android:background="@null"
+            android:onClick="buttonClick"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/navbar_button_text_size"
+            android:textColor="@color/white"/>
+               
+        <Button android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:id="@+id/cancel"
+            android:text="返回"
+            android:onClick="buttonClick"
+            android:background="@null"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/navbar_button_text_size"
+            android:textColor="@color/white"/>
+       </RelativeLayout>  
+       
+	     <LinearLayout android:layout_width="fill_parent"
+	     android:layout_height="140dp"
+	     android:id="@+id/edll"
+	     android:background="@drawable/edit_news_bg"
+	     android:layout_margin="8dp">
+	    <EditText
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_margin="8dp"
+	        android:background="@null"
+	        android:gravity="left|top"
+	        android:id="@+id/contentTextEt"
+	        android:hint="这一刻的想法..."/>
+	   </LinearLayout>
+	   
+	   <FrameLayout  android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left"
+	        android:id="@+id/content_ll">
+
+	   <GridView 
+	        android:id="@+id/manyImgsGrid"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:numColumns="4"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:layout_marginTop="10dp"
+	        android:horizontalSpacing="3dp"
+	        android:scrollbars="none"
+	        android:gravity="left"
+	        android:layout_gravity="left"
+	        android:verticalSpacing="5dp" >
+	    </GridView>
+	    
+	    <RelativeLayout android:layout_height="wrap_content"
+        	android:layout_width="fill_parent"
+       		android:background="#FFFFF0"
+        	android:id="@+id/urlDescL"
+        	android:padding="5dp"
+        	android:layout_margin="5dp"
+        	android:visibility="gone"
+        	>
+        	<ImageView android:layout_width="54dp"
+        	    android:layout_height="54dp"
+        	    android:layout_margin="2dp"
+        	    android:layout_centerVertical="true"
+        	    android:scaleType="centerCrop"
+        	    android:id="@+id/ulrIcon"
+        	    android:layout_alignParentLeft="true"/>
+        	<TextView android:layout_width="fill_parent"
+        	    android:layout_height="wrap_content"
+        	    android:layout_toRightOf="@+id/ulrIcon"
+        	    android:id="@+id/ulrDesc"
+        	     android:layout_margin="3dp"
+        	    android:autoLink="web"
+        	    android:maxLines="2"
+        	    android:textSize="16dp"
+        	    android:textColor="#080808"
+        	    />
+        </RelativeLayout>
+     </FrameLayout>
+</LinearLayout>

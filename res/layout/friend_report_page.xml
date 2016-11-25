@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+   		android:layout_height="fill_parent"
+   		android:background="@color/white"
+    	android:orientation="vertical" >
+    	<RelativeLayout
+        	android:id="@+id/top_layout"
+        	android:layout_width="fill_parent"
+        	android:layout_height="44dp"
+        	android:background="@color/topbar_color">
+        	<Button android:id="@+id/cancelBtn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_marginLeft="6dp"
+            	android:layout_centerVertical="true"
+            	android:onClick="buttonClick"
+            	android:clickable="true"
+            	android:textSize="@dimen/navbar_button_text_size"
+            	android:text="返回"
+            	android:background="#00000000"
+            	android:textColor="@color/white" />
+        	
+        	<TextView 
+	            android:layout_width="wrap_content"
+	      		android:layout_height="wrap_content"
+	            android:text="好友报告"
+	            android:layout_centerInParent="true"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/navbar_title_size"/>
+        	</RelativeLayout>
+
+    	<ScrollView android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent">
+    	 <LinearLayout android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:orientation="vertical">
+	    	<RelativeLayout android:layout_width="fill_parent"
+		    	    android:layout_height="wrap_content"
+		    	    android:id="@+id/top_img_ll">
+	 
+		    	    <ImageView android:layout_width="80dp"
+		    	        android:layout_height="80dp"
+		    	        android:id="@+id/head"
+		    	        android:scaleType="fitXY"
+		    	        android:clickable="true"
+		    	        android:onClick="buttonClick"
+		    	        android:layout_marginTop="30dp"
+		    	        android:src="@drawable/avatar_placeholder"
+						android:layout_centerHorizontal="true"/>
+		    	    <TextView android:layout_width="wrap_content"
+		    	        android:layout_height="wrap_content"
+		    	        android:textSize="18dp"
+		    	        android:textColor="@color/black"
+		    	        android:layout_below="@+id/head"
+		    	        android:textStyle="bold"
+		    	        android:id="@+id/name"
+		    	        android:layout_marginTop="10dp"
+		    	        android:layout_centerHorizontal="true"
+		    	        android:text="张三"/>
+		    	</RelativeLayout>  
+		    	
+	    	
+	    	 <LinearLayout android:layout_width="fill_parent"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_marginTop="30dp"
+		    	    android:orientation="vertical">
+	    	     	<TextView android:layout_width="fill_parent"
+	    	     	    android:layout_height="wrap_content"
+	    	     	    android:text="好友概率   70%"
+	    	     	    android:gravity="center"
+	    	     	    android:textStyle="bold"
+	    	     	    android:id="@+id/friend_rate"
+	    	     	    android:textColor="@color/orangered"
+	    	     	    android:textSize="20dp"/>
+	    	     	<TextView android:layout_width="fill_parent"
+	    	     	    android:layout_height="wrap_content"
+	    	     	    android:layout_marginTop="20dp"
+	    	     	    android:text="你们有  8  个共同好友"
+	    	     	    android:layout_marginRight="40dp"
+	    	     	    android:id="@+id/com_friend"
+	    	     	    android:gravity="center"
+	    	     	    android:textColor="@color/black"
+	    	     	    android:textSize="18dp"/>
+	    	     	
+	    	     	<TextView android:layout_width="fill_parent"
+	    	     	    android:layout_height="wrap_content"
+	    	     	    android:layout_marginTop="20dp"
+	    	     	    android:text="你们有  3  个共同标签"
+	    	     	    android:layout_marginLeft="50dp"
+	    	     	    android:id="@+id/com_tag"
+	    	     	    android:gravity="center"
+	    	     	    android:textColor="@color/black"
+	    	     	    android:textSize="18dp"/>
+	    	     	
+	    	     	<TextView android:layout_width="fill_parent"
+	    	     	    android:layout_height="wrap_content"
+	    	     	    android:layout_marginTop="20dp"
+	    	     	    android:text="你们相距只有  1km"
+	    	     	    android:layout_marginRight="20dp"
+	    	     	    android:id="@+id/distance"
+	    	     	    android:gravity="center"
+	    	     	    android:textColor="@color/black"
+	    	     	    android:textSize="18dp"/>
+	    	     	
+	    	     	<TextView android:layout_width="fill_parent"
+	    	     	    android:layout_height="wrap_content"
+	    	     	    android:layout_marginTop="20dp"
+	    	     	    android:text="你们相互评论或点赞过  5 次"
+	    	     	    android:layout_marginLeft="20dp"
+	    	     	    android:gravity="center"
+	    	     	    android:id="@+id/interation"
+	    	     	    android:textColor="@color/black"
+	    	     	    android:textSize="18dp"/>
+	    	 </LinearLayout>
+	
+	    	 <Button android:layout_width="fill_parent"
+		    	        android:layout_height="48dp"
+		    	        android:layout_marginLeft="20dp"
+		    	        android:layout_marginRight="20dp"
+		    	        android:background="@drawable/orange_btn_normal"
+		    	        android:id="@+id/add_btn"
+		    	        android:text="加为好友"
+		    	        android:layout_marginTop="30dp"
+		    	         android:layout_marginBottom="10dp"
+		    	        android:textSize="18dp"
+		    	        android:textColor="@color/white"
+		    	        android:onClick="buttonClick"/>  
+ 		</LinearLayout>   
+ 	</ScrollView>	
+</LinearLayout>
+

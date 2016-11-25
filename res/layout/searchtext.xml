@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- 
+    	编辑框控件
+    	宽度匹配屏幕
+    	高度适应文字
+    	在编辑框左边画上搜索的那个图片
+    	单行编辑框
+     -->
+	<EditText 
+	    android:id="@+id/et_searchtext_search"
+	    android:layout_width="match_parent"
+	    android:layout_height="36dp"
+	    android:drawableLeft="@drawable/search_bar_icon_normal"
+	    android:background="@drawable/ic_preference_single_normal"
+	    android:singleLine="true"/>
+	<!-- 
+		图片控件
+		宽度高度都是适应图片大小
+		图片资源来自一个配置文件
+		对齐在编辑框的右边
+		默认不可见且不占用屏幕位置
+	 -->
+	<ImageView
+	    android:id="@+id/ib_searchtext_delete"
+	    android:layout_width="wrap_content"
+	    android:layout_height="36dp"
+	    android:src="@drawable/searchtext_selector"
+	    android:layout_alignRight="@id/et_searchtext_search"
+	    android:layout_marginRight="22dp"
+	    android:layout_marginTop="14dp"
+	    android:visibility="gone"/>
+</RelativeLayout>
